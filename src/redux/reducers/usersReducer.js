@@ -1,9 +1,9 @@
-import * as type from '../types'
+import * as type from '../constants'
 
 const initialState = {
     users: [],
-    loading: false,
-    error: null,
+    loading: '',
+    error: null
   }
   
   export default function users(state = initialState, action) {
