@@ -4,6 +4,7 @@ import PropsExample from './components/propsExample';
 import ClassComponent from './components/classComponent';
 import FunctionalComponent from './components/functionalComponent';
 import UseRefExample from './components/useRefExample';
+import CustomHooks from './components/customHook';
 import { useState } from 'react'
 
 function App() {
@@ -29,10 +30,12 @@ function App() {
       <div className="functionalComponent">
         <FunctionalComponent />
       </div>
-      <hr/>
+      <hr />
       <div className="useRefExample">
         <UseRefExample />
+      <hr />
       </div>
+      <CustomHooks />
     </div>
   )
 }
