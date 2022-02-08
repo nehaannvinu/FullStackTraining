@@ -2,7 +2,8 @@ import './App.css';
 import UseStateExample from './components/useStateExample';
 import PropsExample from './components/propsExample';
 import ClassComponent from './components/classComponent';
-import {useState } from 'react'
+import FunctionalComponent from './components/functionalComponent';
+import { useState } from 'react'
 
 function App() {
 
@@ -13,17 +14,19 @@ function App() {
     name2: "Megha"
   }
 
-  return(
+  return (
     <div className="App">
       <UseStateExample />
       {/* Passing names as props to child component */}
-      <PropsExample names={names}/>
-      <div>
-        <hr/>
+      <PropsExample names={names} />
+      <hr />
+      <button onClick={() => setFlag(!flag)}>Show Current Time</button>
+      <div className="classcomponent">
+        {flag ? <ClassComponent /> : " "}
       </div>
-      <button onClick={()=> setFlag(!flag)}>Time</button>
-      <div>
-        {flag? <ClassComponent/>:" "}
+      <hr />
+      <div className="functionalComponent">
+        <FunctionalComponent />
       </div>
     </div>
   )
