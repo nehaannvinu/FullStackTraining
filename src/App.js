@@ -3,6 +3,7 @@ import UseStateExample from './components/useStateExample';
 import PropsExample from './components/propsExample';
 import ClassComponent from './components/classComponent';
 import FunctionalComponent from './components/functionalComponent';
+import UseRefExample from './components/useRefExample';
 import { useState } from 'react'
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
       <hr />
       <div className="functionalComponent">
         <FunctionalComponent />
+      </div>
+      <hr/>
+      <div className="useRefExample">
+        <UseRefExample />
       </div>
     </div>
   )
