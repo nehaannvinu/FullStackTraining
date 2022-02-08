@@ -55,6 +55,7 @@ const UseStateExample = () => {
                     ))}
                 </ul>
             </div>
+            <hr/>
         </div>
     );
 }
