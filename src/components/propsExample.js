@@ -1,10 +1,12 @@
-const PropsExample = (props) => {
+const PropsExample = ({name, accountId, balance, ...optional}) => {
     
     return (
         <div>
             <h3>Props from parent component</h3>
-            <p>Name 1: {props.names.name1}</p>
-            <p>Name 2: {props.names.name2}</p>
+            <p>Name : {name}</p>
+            <p>Account Id: {accountId}</p>
+            <p>Balance : {balance}</p>
+            <p>Role :{optional.role}</p>
         </div>
     )
 }

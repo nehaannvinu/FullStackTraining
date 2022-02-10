@@ -11,16 +11,19 @@ function App() {
 
   const [flag, setFlag] = useState(false);
 
-  const names = {
-    name1: "Neha",
-    name2: "Megha"
+  const userDetails = {
+    name:"Neha",
+    role:"Employee",
+    accountId:2109028003,
+    balance:213,
+    isAdmin: true,
   }
 
   return (
     <div className="App">
       <UseStateExample />
       {/* Passing names as props to child component */}
-      <PropsExample names={names} />
+      <PropsExample  {...userDetails}/>
       <hr />
       <button onClick={() => setFlag(!flag)}>Show Current Time</button>
       <div className="classcomponent">
