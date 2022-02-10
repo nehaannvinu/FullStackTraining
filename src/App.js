@@ -5,6 +5,7 @@ import ClassComponent from './components/classComponent';
 import FunctionalComponent from './components/functionalComponent';
 import UseRefExample from './components/useRefExample';
 import CustomHooks from './components/customHook';
+import UpdateObject from './components/updateObjectExample';
 import { useState } from 'react'
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <hr />
       </div>
       <CustomHooks />
+      <UpdateObject/>
     </div>
   )
 }
