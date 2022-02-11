@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import Button from "./components/button";
 import AddToken from "./pages/addToken";
 
 

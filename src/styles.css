@@ -1,0 +1,21 @@
+.heading{
+    font-family: Monte;
+    margin: 20px;
+}
+
+.textInputs{
+    margin: 20px;
+}
+
+#tokenname{
+    margin-right:20px
+}
+
+.btn-success{
+    margin-left: 20px
+}
+
+.card{
+    margin: 20px;
+    width: 500px
+}
