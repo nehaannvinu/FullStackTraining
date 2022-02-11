@@ -39,7 +39,6 @@ const AddToken = () => {
             <div>
                 <input id="tokenname" placeholder="Eg:NAV Coin" onChange={handleTokenName} type="text" value={tokenName} />
                 <input id="tokensymbol" placeholder="Eg:NAV" onChange={handleTokenSymbol} type="text" value={tokenSymbol} />
-                {/* <button type="button" onClick={handleClick} class="btn btn-success" >ADD</button> */}
                 <Button handleClick={handleClick}/>
             </div>
             <div className="classcomponent">
