@@ -3,12 +3,20 @@ body{
     margin:20px;
 }
 
+.heading{
+    margin-bottom: 30px;
+}
+
 #tokenname{
     margin-right:20px
 }
 
 .btn-success{
     margin-left: 20px
+}
+
+.symbolHeading{
+margin-left: 145px;
 }
 
 .card{

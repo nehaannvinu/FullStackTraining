@@ -44,7 +44,9 @@ const AddToken = () => {
                 <h3>Token Catalogue</h3>
             </div>
             <div className="textInputs">
-                <input id="tokenname" placeholder="Eg:NAV Coin" onChange={handleTokenName} type="text" value={tokenName} />
+                <label for="tokenname">Token Name</label>
+                <label for="tokensymbol" className="symbolHeading">Token Symbol</label> <br/>
+                <input id="tokenname" label="Token Name" placeholder="Eg:NAV Coin" onChange={handleTokenName} type="text" value={tokenName} />
                 <input id="tokensymbol" placeholder="Eg:NAV" onChange={handleTokenSymbol} type="text" value={tokenSymbol} />
                 <Button handleClick={handleClick} />
             </div>
