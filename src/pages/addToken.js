@@ -8,6 +8,8 @@ const AddToken = () => {
     const [tokenSymbol, setTokenSymbol] = useState("")
     const [flag, setflag] = useState(false)
     const [tokens, setTokens] = useState([{
+        name: "",
+        symbol: ""
     }]);
 
     let newToken = "";
@@ -46,8 +48,8 @@ const AddToken = () => {
                 <input id="tokensymbol" placeholder="Eg:NAV" onChange={handleTokenSymbol} type="text" value={tokenSymbol} />
                 <Button handleClick={handleClick} />
             </div>
-            <div className="classcomponent">
-                {flag ? <Card tokens={tokens} /> : " "}
+            <div className="cardcomponent">
+                {flag ? tokens.map((token) => <Card name={token.name} symbol={token.symbol} />) : " "}
             </div>
         </div>
     )

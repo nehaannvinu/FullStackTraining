@@ -1,16 +1,18 @@
 import "../styles.css"
 
-const Card = ({tokens}) => {
+const Card = ({ name, symbol }) => {
     return (
-        <div className="card">
-            <div className="card-body">
-                <>
-                    {tokens.map(({ name, symbol }) => (
-                        <p key={name}> Token name is {name} with symbol {symbol}</p>
-                    ))}
-                </>
+        <div>
+            <div className="card">
+                <div className="card-body">
+                    <>
+                        <p className="title">Token name: {name}</p>
+                        <p className="title">Symbol : {symbol}</p>
+                    </>
+                </div>
             </div>
         </div>
+
     )
 }
 
