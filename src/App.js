@@ -1,10 +1,11 @@
 import AddToken from "./pages/addToken";
+import Button from "./components/button";
 
 
 function App() {
   return (
     <div className="App">
-      <AddToken/>
+      <AddToken button={Button}/>
     </div>
   );
 }

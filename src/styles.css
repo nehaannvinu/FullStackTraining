@@ -23,6 +23,19 @@ margin-left: 145px;
     box-shadow: 5px 5px 3px grey;
     border:solid grey 1px;
     margin-top: 20px;
-    height: 100px;
     width:fit-content
 }
+
+.card-button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+.card-button:focus {
+    outline: none;
+  }
