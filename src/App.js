@@ -5,6 +5,8 @@ import Login from "./pages/Login"
 import './App.css';
 import Navbar from './components/Navbar';
 
+// Try adding app.const for storing path variables
+
 function App() {
   return (
     <Router>
