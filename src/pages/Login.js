@@ -1,51 +1,50 @@
 import { useState, useEffect} from "react";
+import PropTypes from 'prop-types'
 
-const Login = () => {
-
-    const [email, setemail] = useState("");
-    const [password, setPassword] = useState("");
-    const [user, setUser] = useState()
-
-    useEffect(() => {
-        localStorage.setItem("email", JSON.stringify(email));
-        localStorage.setItem("password", JSON.stringify(password));
-      }, [email, password]);
-
-    const handleSubmit = async e => {
-        e.preventDefault();
-        console.log("Value Submitted");
-    }
-    if (user) {
-        return <div>Welcome {user.name}!</div>;
-    }
-
-    return (
-        <div>
-            <h3>LOGIN SCREEN</h3>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Email: </label>
-                <input
-                    type="email"
-                    value={email}
-                    required
-                    placeholder="neha@gmail.com"
-                    onChange={({ target }) => setemail(target.value)
-                    }
-                />
-                <div>
-                    <label htmlFor="password">Password: </label>
-                    <input
-                        type="password"
-                        value={password}
-                        required
-                        placeholder="enter a password"
-                        onChange={({ target }) => setPassword(target.value)}
-                    />
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    )
-}
-
-export default Login;
+async function loginUser(credentials) {
+    return fetch('http://localhost:8080/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(data => data.json())
+   }
+   
+   export default function Login({ setToken }) {
+     const [username, setUserName] = useState();
+     const [password, setPassword] = useState();
+   
+     const handleSubmit = async e => {
+       e.preventDefault();
+       const token = await loginUser({
+         username,
+         password
+       });
+       setToken(token);
+     }
+   
+     return(
+       <div className="login-wrapper">
+         <h1>Please Log In</h1>
+         <form onSubmit={handleSubmit}>
+           <label>
+             <p>Username</p>
+             <input type="text" onChange={e => setUserName(e.target.value)} />
+           </label>
+           <label>
+             <p>Password</p>
+             <input type="password" onChange={e => setPassword(e.target.value)} />
+           </label>
+           <div>
+             <button type="submit">Submit</button>
+           </div>
+         </form>
+       </div>
+     )
+   }
+   
+   Login.propTypes = {
+     setToken: PropTypes.func.isRequired
+   };

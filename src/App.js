@@ -4,18 +4,24 @@ import Album from "./pages/Album"
 import Login from "./pages/Login"
 import './App.css';
 import Navbar from './components/Navbar';
+import useToken from './components/useToken';
 
 // Try adding app.const for storing path variables
 
 function App() {
+
+  const {token, setToken} = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
   
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/album" element={<Album />} />
         </Routes>
       </div >
