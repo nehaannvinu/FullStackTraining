@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 // Try adding app.const for storing path variables
 
 function App() {
+  
   return (
     <Router>
       <div className="App">
