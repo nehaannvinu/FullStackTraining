@@ -4,9 +4,9 @@ import Album from "./pages/Album"
 import Login from "./pages/Login"
 import './App.css';
 import Navbar from './components/Navbar';
-import useToken from './components/useToken';
+import useToken from './utils/useToken';
+import {home, album} from "./constants/routes"
 
-// Try adding app.const for storing path variables
 
 function App() {
 
@@ -21,8 +21,8 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/album" element={<Album />} />
+          <Route path={home} element={<Home />} />
+          <Route path={album} element={<Album />} />
         </Routes>
       </div >
     </Router>
