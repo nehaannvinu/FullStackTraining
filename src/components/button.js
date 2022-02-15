@@ -1,11 +1,3 @@
 import "../styles.css"
 
-const Button = ({handleClick}) => {
-    return(
-        <>
-            <button onClick={handleClick} type="button" class="btn btn-success" >ADD</button>
-        </>
-    )
-}
-
-export default Button
+export const Button = ({ handleClick, children }) => <button onClick={handleClick} type="button" className="btn btn-success" >{children}</button>

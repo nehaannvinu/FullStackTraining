@@ -1,8 +1,9 @@
 import AddToken from "./pages/addToken";
-import Button from "./components/button";
+import {Button} from "./components/button";
 import { useState } from "react";
+import { card } from "./components/card";
 
-function App() {
+function App(props) {
 
   const [tokenName, setTokenName] = useState("");
   const [tokenSymbol, setTokenSymbol] = useState("")
@@ -60,8 +61,13 @@ function App() {
         tokens={tokens}
         tokenName={tokenName}
         tokenSymbol={tokenSymbol}
-        flag={flag}>
-        <Button />
+        tokenId={tokenId}
+        flag={flag}
+        card={card}
+      >
+        <Button handleClick={handleClick}>
+          Add
+        </Button>
       </AddToken>
     </div>
   );
