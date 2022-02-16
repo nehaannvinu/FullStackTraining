@@ -11,10 +11,10 @@ import {home, album} from "./constants/routes"
 
 function App() {
 
-  const {token, setToken} = useToken();
+  const {getToken, saveToken} = useToken();
 
-  if(!token) {
-    return <Login setToken={setToken} />
+  if(!getToken) {
+    return <Login setToken={saveToken} />
   }
   
   return (
